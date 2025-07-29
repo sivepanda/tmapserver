@@ -1,0 +1,9 @@
+/build
+/__pycache
+/logs
+/outputs
+/env
+/tests/__pycache__
+/go_enrichment/__pycache__
+*egg-info/
+*__pycache__

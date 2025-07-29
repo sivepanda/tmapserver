@@ -3,7 +3,7 @@ print(find_packages())
 
 setup(
     name='tmapserver',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(include=['tmapserver']),
     install_requires=[
         'numpy',
@@ -12,6 +12,9 @@ setup(
         'pandas',
         'anndata',
         'scipy',
+        'subprocess-tee',  # For better subprocess handling
+        'psutil',          # For process management
+        'requests',        # For checking server status
     ],
     entry_points={
         'console_scripts': [

@@ -1,9 +1,41 @@
-/build
-/__pycache
-/logs
-/outputs
-/env
+# Build artifacts
+/build/
+/dist/
+*egg-info/
+*.egg-info/
+
+# Python bytecode
+*__pycache__/
+/__pycache__
 /tests/__pycache__
 /go_enrichment/__pycache__
-*egg-info/
-*__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Development environment
+/env/
+/venv/
+/.venv/
+
+# Project specific
+/logs/
+/outputs/
+
+# Backup files
+*.bak
+setup.py.bak
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp

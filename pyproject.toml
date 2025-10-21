@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tmapserver"
+name = "adata-sanitize"
 version = "0.0.2"
-description = "Sanitize STHD files and spin up a TissUUmaps viewing server locally"
+description = "Sanitize AnnData column names by removing/replacing special characters"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [
@@ -24,19 +24,11 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dependencies = [
-    "numpy",
-    "tqdm",
-    "STHD",
-    "pandas",
     "anndata",
-    "scipy",
-    "subprocess-tee",
-    "psutil",
-    "requests",
 ]
 
 [project.scripts]
-tmapserver = "tmapserver.main:main"
+adata-sanitize = "tmapserver.main:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

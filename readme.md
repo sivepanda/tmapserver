@@ -32,7 +32,7 @@ Then, running the Tissuumaps instance in the DCC is as simple as tissuumaps_serv
 The #1 issue I faced is what the script in this repo addresses. Tissuumaps is somewhat opinionated in the input it recieves, and certain non escaped characters cause issues with visualizing all data properly. If you see that not all genes are viewable or suspect you have an issue, you can run the sanitization script in this repo by cloning and cd-ing into it, then:
 
 1. `pip install .`
-2. `tmapserver [input].h5ad [output].h5ad`
+2. `adata-sanitize [input].h5ad [output].h5ad`
 
 #### Other Common Quirks
 - Path to image must be a *direct path*

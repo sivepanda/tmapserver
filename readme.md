@@ -1,14 +1,14 @@
 # Tissuumaps Setup with H5AD!
 
 ## What you'll need
-1. Installed ( Tissuumaps )[https://tissuumaps.github.io/installation/]. We'll go over installing Conda on the DCC later for this step.
+1. Installed [Tissuumaps](https://tissuumaps.github.io/installation/). We'll go over installing Conda on the DCC later for this step.
 2. You need an H5AD file on hand to view!
 
 
 ## Running
 Running Tissuumaps is fairly simple. In this case, we are setting up for DCC usage, which means that we'll need to both install dependencies, conda, and pip.
 
-To install Conda, follow the guide (here)[https://oit-rc.pages.oit.duke.edu/rcsupportdocs/software/user/#miniconda-installation-sample] under "Miniconda intallation sample". Then, you can follow the directions on the Tissuumaps installation website for Conda installation. 
+To install Conda, follow the guide [here](https://oit-rc.pages.oit.duke.edu/rcsupportdocs/software/user/#miniconda-installation-sample) under "Miniconda intallation sample". Then, you can follow the directions on the Tissuumaps installation website for Conda installation. 
 
 You then install Tisuumaps with pip using a pipenv in your working directory.
 
@@ -16,6 +16,9 @@ In order to run Tisuumaps on the DCC, you'll need port forwarding to access the 
 
 Run this script in order to Port Forward the locally hosted Tissuumaps instance to your PC
 `ssh  -t -t -i .ssh/id  [netid]@dcc-login.oit.duke.edu -L 5000:localhost:5000 ssh -i .ssh/id dcc-core-[corenumber] -L 5000:localhost:5000`
+
+You can find your corenumber in DCC On Demand:
+<img width="977" height="431" alt="image" src="https://github.com/user-attachments/assets/16461a0e-ec0a-4962-b4bc-35538c523ced" />
 
 You can also locally set some of these variables if you do not forsee them changing. The NetID is likely the more likely choice. You can do this by:
 `export netid=abc123`
@@ -25,7 +28,7 @@ And optionally the corenumber the same way, though this changes every time you m
 `ssh -t -t -i .ssh/id ${netid}@dcc-login.oit.duke.edu -L 5000:localhost:5000 ssh -i .ssh/id dcc-core-${corenumber} -L 5000:localhost:5000`
 
 
-Then, running the Tissuumaps instance in the DCC is as simple as tissuumaps_server "/path/to/image"
+Then, running the Tissuumaps instance in the DCC is as simple as `tissuumaps_server "/path/to/image" --port 5000` *you can also set to port to whatever you like, but you must also ensure that all instances of 5000 in the port forwarding command are updated as well!*
 
 
 ### Common issues
